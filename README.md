@@ -1,0 +1,12 @@
+# be-the-hero
+comando para linux - erro de limite de numero de arquivos para observador.
+---[nodemon] Internal watch failed: ENOSPC: System limit for number of file watchers reached, watch '/home/rony/Documentos/NODEJS/omni/backend/src'
+
+solução:
+
+sudo sysctl -w fs.inotify.max_user_watches=100000
+
+
+---- caso a pasta esteja em modo root utilizar o comando a seguir pra alterar 
+
+ sudo chown --recursive rony ./mobile
